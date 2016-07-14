@@ -1,0 +1,27 @@
+Installing on Linux & Solaris
+=============================
+
+#Installation Instructions
+
+#Uncompress and extract the contents of the installation file. For example:
+
+    % tar -xvzf Understand-4.0.800-Linux-64bit.tgz
+
+#This will extract Understand. The executable is located in the bin directory.
+
+  % cd scitools/bin/linux64
+  % ./understand
+
+##Add to PATH
+
+#The PATH variable should be updated for each user, either in a
+#system-specific location or individually by each user. Add the appropriate bin directory to the path e.g.:
+
+  % export PATH=$PATH:/path/scitools/bin/linux64
+
+###Add STIHOME variable for C API use
+
+#If you’re planning on using the C API, add the STIHOME variable to your environment as well. It should point to the
+#directory where Understand is installed. e.g:
+
+  % export STIHOME=/path/scitools

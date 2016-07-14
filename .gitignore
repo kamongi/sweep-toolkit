@@ -1,0 +1,13 @@
+coreFiles/ITProduct-CVEID.txt
+plugins/MetricsGeneration/__pycache__/**
+plugins/__pycache__/**
+plugins/SupportingScripts/*.class
+Data-Feeds/**
+Understand-Data/**
+scitools/**
+Understand-4.0.813-Linux-64bit.tgz
+*.pyc
+*.class
+*.tgz
+clean.sh
+demo.sh

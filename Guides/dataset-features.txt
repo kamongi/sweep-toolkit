@@ -1,0 +1,100 @@
+:: This is a complete list of the currently supported features found in any of 
+:: our generated IT Product dataset for each IT Product's release. 
+
+
+Feature Name && 
+        ::	Description
+***********************                                      
+
+	cpeName											
+			:: IT Product release name in a CPE format
+	#CVEIDs											
+			:: Accumulated total number of thus known vulnerabilities
+	Year-1999										
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2000
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2001
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2002
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2003
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2004
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2005
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2006
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2007
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2008
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2009
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2010
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2011
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2012
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2013
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2014
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2015
+			:: Total number of publicly disclosed vulnerabilities for this year
+	Year-2016
+			:: Total number of publicly disclosed vulnerabilities for this year
+
+
+# Understand Metrics, See "https://scitools.com/support/metrics_list/". 
+
+Understand Feature Names
+************************ 
+
+	AltAvgLineBlank, AltAvgLineCode, AltAvgLineComment, AltCountLineBlank,
+	AltCountLineCode, AltCountLineComment, AvgCyclomatic, AvgCyclomaticModified,
+	AvgCyclomaticStrict, AvgEssential, AvgEssentialStrictModified, AvgLine,
+	AvgLineBlank, AvgLineCode, AvgLineComment, CountClassBase,
+	CountClassCoupled, CountClassDerived, CountDeclClass, CountDeclClassMethod,
+	CountDeclClassVariable, CountDeclFile, CountDeclFileCode, CountDeclFileHeader,
+	CountDeclFunction, CountDeclInstanceMethod, CountDeclInstanceVariable,
+	CountDeclInstanceVariableInternal, CountDeclInstanceVariablePrivate,
+	CountDeclInstanceVariableProtected, CountDeclInstanceVariableProtectedInternal,
+	CountDeclInstanceVariablePublic, CountDeclLibunit, CountDeclMethod,
+	CountDeclMethodAll, CountDeclMethodConst, CountDeclMethodDefault,
+	CountDeclMethodFriend, CountDeclMethodInternal, CountDeclMethodPrivate,
+	CountDeclMethodProtected, CountDeclMethodProtectedInternal, CountDeclMethodPublic,
+	CountDeclMethodStrictPrivate, CountDeclMethodStrictPublished, CountDeclModule,
+	CountDeclProgunit, CountDeclProperty, CountDeclPropertyAuto, CountDeclSubprogram,
+	CountInput, CountLine, CountLineBlank, CountLineBlank_Html, CountLineBlank_Javascript,
+	CountLineBlank_Php, CountLineCode, CountLineCodeDecl, CountLineCodeExe,
+	CountLineCode_Javascript, CountLineCode_Php, CountLineComment, CountLineComment_Html,
+	CountLineComment_Javascript, CountLineComment_Php, CountLineInactive, CountLinePreprocessor,
+	CountLine_Html, CountLine_Javascript, CountLine_Php, CountOutput, CountPackageCoupled,
+	CountPath, CountSemicolon, CountStmt, CountStmtDecl, CountStmtDecl_Javascript,
+	CountStmtDecl_Php, CountStmtEmpty, CountStmtExe, CountStmtExe_Javascript,
+	CountStmtExe_Php, Cyclomatic, CyclomaticModified, CyclomaticStrict, Essential,
+	EssentialStrictModified, Knots, MaxCyclomatic,MaxCyclomaticModified, MaxCyclomaticStrict,
+	MaxEssential, MaxEssentialKnots, MaxEssentialStrictModified, MaxInheritanceTree,
+	MaxNesting, MinEssentialKnots, PercentLackOfCohesion, RatioCommentToCode, SumCyclomatic,
+	SumCyclomaticModified, SumCyclomaticStrict, SumEssential, SumEssentialStrictModified
+	
+	# i.e.,
+
+		::  Friendly Name	
+			&& API Name	
+				&& Description
+								
+		:1: Average Cyclomatic Complexity	
+			&& AvgCyclomatic	
+				&& Average cyclomatic complexity for all nested functions or methods.
+
+		:2: Executable Lines of Code
+			&&	CountLineCodeExe	
+				&& Number of lines containing executable source code.
+
+		:3: Depth of Inheritance Tree	
+			&& MaxInheritanceTree	
+				&& Maximum depth of class in inheritance tree. [aka DIT]

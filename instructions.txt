@@ -1,0 +1,100 @@
+# Instructions
+
+  The order of these steps is required. 
+
+:: Step 1: 
+
+	You need to create a directory Data-Feeds/NVD in this root path to contain all the latest vulnerabilities data feeds from "https://nvd.nist.gov/download.cfm". 
+	These data feeds will be later used in the metrics datasets automatic 
+	creation for various IT Products. 
+
+	Usage: 
+		$ python3 plugins/SupportingScripts/vulnsDataFeeds.py
+
+:: Step 2: 
+
+	Generate two key important files under /coreFiles directory, which will contain 
+	the latest mappings of IT Product name - CVE-IDs. These mappings details are leveraged 
+	as indexes during the discovery phases of known number of vulnerabilities for each 
+	IT Product release. Note that this mapping approach is not optimal, therefore for 
+	production systems, new indexing or data representations can be utilized. 
+
+	Usage: 
+		# First ensure that you have a java environment configured on your box 
+
+		$ cd plugins/SupportingScripts/
+		$ javac ITProductCVEID.java
+		$ java -Xmx2048m ITProductCVEID
+
+:: Step 3:
+
+	Download and install "Understand" tool for any IT Product's source code metrics generation.
+
+	Usage: 
+		# If you do not have Understand installed already, grab a free license trial at:
+		# "https://scitools.com/"
+
+		# We tested a copy of Understand trial version "Understand-4.0.813-Linux-64bit" 
+		# (md5: 7004a67dbb95c07c22d65da85d7310db) on Ubuntu 16.04 box.
+
+		# Uncompress and extract the contents of the installation file. For example:
+			# cd into the directory of where the Understand is downloaded
+    		$ tar -xvzf Understand-4.0.813-Linux-64bit.tgz
+
+		# This will extract Understand. The executable is located in the bin directory.
+
+			$ cd scitools/bin/linux64
+			$ ./understand # This activate the Understand copy
+
+		# Recall this installation directory, since you will be prompted for its path 
+		# during metrics generation process. #i.e.,: 
+				
+			$ cd /path/scitools && pwd 
+
+			# copy this path (i.e., /home/username/Downloads/scitools)
+			# To be used when prompted for it later on in the next Step. 
+
+:: Step4: 
+
+	To generate software metrics for one or more IT Product(s) given source code, see.
+
+	Usage: 
+
+		# This below will analyze and generate metrics for the 3 specified openssl releases source codes.
+		# Once the metrics generation process is completed, you will be notified on which directory 
+		# to look for your generated metrics. #i.e.,
+		
+		# First 
+			$ python3 plugins/MetricsGeneration/setupEnv.py
+
+		# Second 
+			$ source plugins/MetricsGeneration/runmefirst.sh
+
+		# Then
+			$ python3 manager.py examples/OpenSSL-Samples/OpenSSL-Preview 1
+
+:: Step5: 
+	
+	To analyze the generated metrics for the dataset auto construction, see.
+
+	Usage:
+
+		# This below will produce a .csv dataset file from the generated metrics .csv files that 
+		# contains the details for each analyzed IT Product release such as:
+		#	- IT Product releases (in CPE format if applicable)
+		#	- Vulnerability maturity history
+		#	- Generated software code's metrics
+		
+		#i.e.1,
+			$ python3 manager.py examples/OpenSSL-Samples/OpenSSL-Metrics 0
+
+		#i.e.2,
+			$ python3 manager.py Understand-Data/Metrics 0
+
+		
+:: Optional: 
+
+	# Want to chain all these steps at once? 
+		# Create a shell script to automate all these steps.
+
+		# i.e. TBA
