@@ -1,6 +1,6 @@
 # Sweep-Toolkit: 
 
-	:: This toolkit facilites the automation process of software metrics generation for any given IT Product's releases source codes using UNDERSTAND tool [1]. 
+	:: This toolkit facilitates the automation process of software metrics generation for any given IT Product's releases source codes using UNDERSTAND tool [1]. 
 	
 	:: In addition, it leverages National Vulnerability Database (NVD) data-feeds [2] to automatically extract all disclosed vulnerability details for each analyzed IT Product release.
 
