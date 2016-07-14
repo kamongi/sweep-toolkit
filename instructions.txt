@@ -64,11 +64,11 @@
 		# Once the metrics generation process is completed, you will be notified on which directory 
 		# to look for your generated metrics. #i.e.,
 		
-		# First 
-			$ python3 plugins/MetricsGeneration/setupEnv.py
+		# First (cd into the sweep-toolkit root directory), next substitute [arg] with "/path/scitools"
+			$ python3 plugins/MetricsGeneration/setupEnv.py [path]
 
 		# Second 
-			$ source plugins/MetricsGeneration/runmefirst.sh
+			$ source runmefirst.sh
 
 		# Then
 			$ python3 manager.py examples/OpenSSL-Samples/OpenSSL-Preview 1
