@@ -95,6 +95,6 @@
 :: Optional: 
 
 	# Want to chain all these steps at once? 
-		# Create a shell script to automate all these steps.
+		# Edit and run "quick-start.sh" or "setup-openssl-case.sh" scripts.
 
-		# i.e. TBA
+	# Have a feature request, feel free to post it or extend this toolkit.

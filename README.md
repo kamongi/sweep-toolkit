@@ -18,6 +18,11 @@
 
 	:: Clone a copy, and see the "instructions.txt" document on how to use this toolkit. 
 
+## Limitation
+	:: This toolkit is designed and tested with OpenSSL releases's source codes. 
+	:: For any other type of IT Products, make some updates to "plugins/MetricsGeneration/metsAnalyzer.py".
+	:: In the next update, this toolkit will be set to work with any IT Product by default.
+
 ## Applications
 
 	:1:
