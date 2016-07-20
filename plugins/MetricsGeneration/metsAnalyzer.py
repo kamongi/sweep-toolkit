@@ -252,8 +252,8 @@ class OpsOnMets(object):
 		#genericName = self.rReleasesNames[0]
 		#genericName = genericName.split("-")[0]
 
-		genericName = "openssl-test"     # Test
-		#genericName = "openssl-dataset" # Production (Auto detect it, TODO)
+		#genericName = "openssl-test"     # Test
+		genericName = "openssl-dataset" # Production (Auto detect it, TODO)
 
 		outCsvFile  = self.datasetsDir + genericName + ".csv"
 		print ("\nProposed metrics dataset name: ", outCsvFile)
